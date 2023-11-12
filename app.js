@@ -10,14 +10,14 @@ app.get("/", (req, res) =>
   res.sendFile('/index.html')
 )
 
-let things = ['OG','FM','JOG','OG Draggy','FM Draggy']
+let things = ['OG','FM','OG Draggy','FM Draggy']
 
 app.get('/things', (req, resp) =>
   resp.json(things)
 )
 
 app.post('/things', (req, resp) => {
-    things = [...things,`JOG baby ${things.length - 4}`]
+    things = [...things,`JOG baby ${things.length - 3}`]
     resp.json(things)
 })
   
