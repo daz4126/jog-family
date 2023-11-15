@@ -10,15 +10,15 @@ app.get("/", (req, res) =>
   res.sendFile('/index.html')
 )
 
-let things = ['OG','FM','OG Draggy','FM Draggy']
+const jog = ['OG','FM','OG Draggy','FM Draggy']
 
-app.get('/things', (req, resp) =>
-  resp.json(things)
+app.get('/jog', (req, res) =>
+  res.json(jog)
 )
 
-app.post('/things', (req, resp) => {
-    things = [...things,`JOG baby ${things.length - 3}`]
-    resp.json(things)
+app.post('/jog', (req, res) => {
+    jog = [...jog,`JOG baby ${things.length - 3}`]
+    resp.json(jog)
 })
   
 app.listen(port, _ => console.log(`Example app listening on port ${port}!`))
